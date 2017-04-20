@@ -1,18 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="@dimen/margin_botton"
+    android:paddingTop="@dimen/margin_top"
+    android:paddingLeft="@dimen/margin_left"
+    android:paddingRight="@dimen/margin_right"
     tools:context="com.example.rodrigovazquez.filestorage.MainActivity">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="normal"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btnWriteToInternalStorage"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:text="@string/write_file_to_internal_storage"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="normal"/>
+
+    <Button
+        android:id="@+id/btnReadFromInternalStorage"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnWriteToInternalStorage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/read_file_from_internal_storage"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="normal"/>
+
+    <Button
+        android:id="@+id/btnWriteToExternalStorage"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnReadFromInternalStorage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/write_file_to_external_storage"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="normal"/>
+
+    <Button
+        android:id="@+id/btnReadFromExternalStorage"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnWriteToExternalStorage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/write_file_to_internal_storage"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="normal"/>
+</RelativeLayout>

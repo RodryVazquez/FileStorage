@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.WriteFileToInternalStorage" />
+        <activity android:name=".Activities.ReadFileFromInternalStorage" />
+        <activity android:name=".Activities.WriteFileToExternalStorage" />
+        <activity android:name=".Activities.ReadFileFromExternalStorage"></activity>
     </application>
 
 </manifest>
