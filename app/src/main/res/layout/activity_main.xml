@@ -37,12 +37,12 @@
         android:id="@+id/btnReadFromInternalStorage"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnWriteToInternalStorage"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:text="@string/read_file_from_internal_storage"
         android:fontFamily="sans-serif-condensed"
-        android:textStyle="normal"/>
+        android:textStyle="normal"
+        android:layout_below="@+id/btnWriteToInternalStorage"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/btnWriteToExternalStorage"
