@@ -31,20 +31,14 @@ public class WriteFileToInternalStorage extends AppCompatActivity {
         edContent = (EditText) findViewById(R.id.enter_file_content);
 
         btnSave = (Button) findViewById(R.id.save);
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                writeFileInternalStorage(new Data(edFileName.getText().toString(),
-                                edContent.getText().toString()),
-                        v.getContext());
-            }
-        });
+        btnSave.setOnClickListener((v) -> writeFileInternalStorage(new Data(edFileName.getText().toString(),
+                edContent.getText().toString()),v.getContext()));
     }
 
     /**
-     *
-     * @param mData
-     * @param mContext
+     * Crea un arvhivo en el internal storage
+     * @param mData contenedor
+     * @param mContext contexto actual
      */
     private void writeFileInternalStorage(Data mData, Context mContext) {
         FileOutputStream fos = null;
