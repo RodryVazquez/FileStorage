@@ -19,6 +19,10 @@ public class ReadFileFromInternalStorage extends AppCompatActivity {
     private TextView internalFileContent;
     private String fileName = "testFile.txt";
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
