@@ -1,9 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin_top"
+    android:layout_marginBottom="@dimen/margin_botton"
+    android:layout_marginRight="@dimen/margin_right"
+    android:layout_marginLeft="@dimen/margin_left"
     tools:context="com.example.rodrigovazquez.filestorage.Activities.WriteFileToExternalStorage">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/title_activity_write_to_external_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="@string/title_activity_write_to_external_storage"/>
+
+    <!--FILENAME     -->
+    <TextView
+        android:id="@+id/fileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title_activity_write_to_external_storage"
+        android:layout_marginTop="76dp"
+        android:layout_marginLeft="25dp"
+        android:text="@string/filename" />
+
+    <EditText
+        android:id="@+id/enter_fileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_activity_write_to_external_storage"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="65dp"
+        android:layout_toRightOf="@id/fileName"
+        android:hint="@string/filename"/>
+
+    <!-- FILE CONTENT -->
+    <TextView
+        android:id="@+id/file_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/fileName"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="46dp"
+        android:text="@string/file_content" />
+
+    <EditText
+        android:id="@+id/enter_file_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/file_content"
+        android:layout_below="@id/fileName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:hint="@string/file_content"/>
+
+    <!--SAVE -->
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_below="@id/file_content"
+        android:layout_marginTop="46dp"
+        android:layout_marginLeft="25dp"
+        android:fontFamily="sans-serif-condensed"/>
+
+</RelativeLayout>

@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin_top"
+    android:layout_marginBottom="@dimen/margin_botton"
+    android:layout_marginRight="@dimen/margin_right"
+    android:layout_marginLeft="@dimen/margin_left"
     tools:context="com.example.rodrigovazquez.filestorage.Activities.ReadFileFromExternalStorage">
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/title_activity_read_from_external_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="@string/title_activity_read_from_external_storage"/>
+
+    <TextView
+        android:id="@+id/file_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_activity_read_from_external_storage"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>
