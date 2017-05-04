@@ -42,19 +42,23 @@ public class ReadFileFromInternalStorage extends AppCompatActivity {
     public static String readFileInternalStorage(String fileName, Context context) {
         String stringToReturn = " ";
         try {
+            //Abrimos el archivo privado asociado al contexto de la aplicacion
             InputStream inputStream = context.openFileInput(fileName);
             if (inputStream != null) {
+                //Instanciamos el bridge
                 InputStreamReader inputStreamReader =
                         new InputStreamReader(inputStream);
+                //Leemos el texto del stream de caracteres
                 BufferedReader bufferedReader =
                         new BufferedReader(inputStreamReader);
 
                 String receiveString = "";
                 StringBuilder stringBuilder = new StringBuilder();
+                //Leemos la linea de texto y la agregamos al StringBuilder
                 while ((receiveString = bufferedReader.readLine()) != null) {
                     stringBuilder.append(receiveString);
                 }
-
+                //Cerramos el stream y liberamos recursos
                 inputStream.close();
                 stringToReturn = stringBuilder.toString();
             }
