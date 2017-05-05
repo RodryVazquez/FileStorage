@@ -6,7 +6,7 @@ import android.util.Log;
 public class CommonUtil {
 
     /**
-     * Indica si la sd esta disponible para Escritura/Lectura
+     * Indica si la sd esta disponible para Escritura/Lectura del external storage
      *
      * @return
      */
