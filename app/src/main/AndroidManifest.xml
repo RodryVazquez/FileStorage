@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rodrigovazquez.filestorage">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +21,8 @@
         <activity android:name=".Activities.WriteFileToInternalStorage" />
         <activity android:name=".Activities.ReadFileFromInternalStorage" />
         <activity android:name=".Activities.WriteFileToExternalStorage" />
-        <activity android:name=".Activities.ReadFileFromExternalStorage"></activity>
+        <activity android:name=".Activities.ReadFileFromExternalStorage" />
+        <activity android:name=".Activities.StoringDataInCache"></activity>
     </application>
 
 </manifest>

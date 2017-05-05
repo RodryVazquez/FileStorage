@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        writeFileToInternalStorage = (Button)findViewById(R.id.btnWriteToInternalStorage);
+        setContentView(R.layout.activity_storing_data_in_cache);
+       /* writeFileToInternalStorage = (Button)findViewById(R.id.btnWriteToInternalStorage);
         readFileFromInternalStorage = (Button)findViewById(R.id.btnReadFromInternalStorage);
         writeFileToExternalStorage = (Button)findViewById(R.id.btnWriteToExternalStorage);
         readFileFromExternalStorage = (Button)findViewById(R.id.btnReadFromExternalStorage);
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         writeFileToInternalStorage.setOnClickListener(this);
         readFileFromInternalStorage.setOnClickListener(this);
         writeFileToExternalStorage.setOnClickListener(this);
-        readFileFromExternalStorage.setOnClickListener(this);
+        readFileFromExternalStorage.setOnClickListener(this);*/
     }
 
     /**
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     @Override
     public void onClick(View v) {
-        Intent intent = null;
+        /*Intent intent = null;
         switch (v.getId()) {
             case R.id.btnWriteToInternalStorage:
                 intent = new Intent(this, WriteFileToInternalStorage.class);
@@ -59,6 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, ReadFileFromExternalStorage.class);
                 break;
         }
-        startActivity(intent);
+        startActivity(intent);*/
     }
 }
