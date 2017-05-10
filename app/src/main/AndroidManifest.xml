@@ -22,7 +22,8 @@
         <activity android:name=".Activities.ReadFileFromInternalStorage" />
         <activity android:name=".Activities.WriteFileToExternalStorage" />
         <activity android:name=".Activities.ReadFileFromExternalStorage" />
-        <activity android:name=".Activities.StoringDataInCache"></activity>
+        <activity android:name=".Activities.StoringDataInCache" />
+        <activity android:name=".Activities.SQLStorage"></activity>
     </application>
 
 </manifest>

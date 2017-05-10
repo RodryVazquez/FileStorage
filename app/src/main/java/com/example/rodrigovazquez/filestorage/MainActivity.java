@@ -9,6 +9,8 @@ import android.widget.Button;
 
 import com.example.rodrigovazquez.filestorage.Activities.ReadFileFromExternalStorage;
 import com.example.rodrigovazquez.filestorage.Activities.ReadFileFromInternalStorage;
+import com.example.rodrigovazquez.filestorage.Activities.SQLStorage;
+import com.example.rodrigovazquez.filestorage.Activities.StoringDataInCache;
 import com.example.rodrigovazquez.filestorage.Activities.WriteFileToExternalStorage;
 import com.example.rodrigovazquez.filestorage.Activities.WriteFileToInternalStorage;
 
@@ -18,7 +20,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button writeFileToInternalStorage,
             readFileFromInternalStorage,
             writeFileToExternalStorage,
-            readFileFromExternalStorage;
+            readFileFromExternalStorage,
+            saveAndReadInCache,
+            saveAndReadSQLStorage;
 
     /**
      * @param savedInstanceState
@@ -26,16 +30,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_storing_data_in_cache);
-       /* writeFileToInternalStorage = (Button)findViewById(R.id.btnWriteToInternalStorage);
+        setContentView(R.layout.activity_main);
+        writeFileToInternalStorage = (Button)findViewById(R.id.btnWriteToInternalStorage);
         readFileFromInternalStorage = (Button)findViewById(R.id.btnReadFromInternalStorage);
         writeFileToExternalStorage = (Button)findViewById(R.id.btnWriteToExternalStorage);
         readFileFromExternalStorage = (Button)findViewById(R.id.btnReadFromExternalStorage);
+        saveAndReadInCache = (Button)findViewById(R.id.btnStoreInCache);
+        saveAndReadSQLStorage = (Button)findViewById(R.id.btnSqlStorage);
 
         writeFileToInternalStorage.setOnClickListener(this);
         readFileFromInternalStorage.setOnClickListener(this);
         writeFileToExternalStorage.setOnClickListener(this);
-        readFileFromExternalStorage.setOnClickListener(this);*/
+        readFileFromExternalStorage.setOnClickListener(this);
+        saveAndReadInCache.setOnClickListener(this);
+        saveAndReadSQLStorage.setOnClickListener(this);
     }
 
     /**
@@ -44,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     @Override
     public void onClick(View v) {
-        /*Intent intent = null;
+        Intent intent = null;
         switch (v.getId()) {
             case R.id.btnWriteToInternalStorage:
                 intent = new Intent(this, WriteFileToInternalStorage.class);
@@ -58,7 +66,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnReadFromExternalStorage:
                 intent = new Intent(this, ReadFileFromExternalStorage.class);
                 break;
+            case R.id.btnStoreInCache:
+                intent = new Intent(this, StoringDataInCache.class);
+                break;
+            case R.id.btnSqlStorage:
+                intent = new Intent(this, SQLStorage.class);
+                break;
         }
-        startActivity(intent);*/
+        startActivity(intent);
     }
 }
