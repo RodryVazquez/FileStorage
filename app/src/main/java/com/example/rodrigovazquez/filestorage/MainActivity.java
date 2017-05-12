@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnThread:
                 intent = new Intent(this, BackgroundProcessDemo.class);
+                break;
             case R.id.btnStoreInCache:
                 intent = new Intent(this, StoringDataInCache.class);
                 break;
