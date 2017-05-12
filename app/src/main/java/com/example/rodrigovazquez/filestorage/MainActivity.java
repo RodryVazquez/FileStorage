@@ -17,6 +17,8 @@ import android.widget.Toast;
 import com.example.rodrigovazquez.filestorage.Activities.BackgroundProcessDemo;
 import com.example.rodrigovazquez.filestorage.Activities.ReadFileFromExternalStorage;
 import com.example.rodrigovazquez.filestorage.Activities.ReadFileFromInternalStorage;
+import com.example.rodrigovazquez.filestorage.Activities.SQLStorage;
+import com.example.rodrigovazquez.filestorage.Activities.StoringDataInCache;
 import com.example.rodrigovazquez.filestorage.Activities.WriteFileToExternalStorage;
 import com.example.rodrigovazquez.filestorage.Activities.WriteFileToInternalStorage;
 
@@ -27,7 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             readFileFromInternalStorage,
             writeFileToExternalStorage,
             readFileFromExternalStorage,
-            thread;
+            thread,
+            saveAndReadInCache,
+            saveAndReadSQLStorage;
 
     /**
      * @param savedInstanceState
@@ -41,15 +45,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         readFileFromInternalStorage = (Button)findViewById(R.id.btnReadFromInternalStorage);
         writeFileToExternalStorage = (Button)findViewById(R.id.btnWriteToExternalStorage);
         readFileFromExternalStorage = (Button)findViewById(R.id.btnReadFromExternalStorage);
+        saveAndReadInCache = (Button)findViewById(R.id.btnStoreInCache);
+        saveAndReadSQLStorage = (Button)findViewById(R.id.btnSqlStorage);
 
         writeFileToInternalStorage.setOnClickListener(this);
         readFileFromInternalStorage.setOnClickListener(this);
         writeFileToExternalStorage.setOnClickListener(this);
         readFileFromExternalStorage.setOnClickListener(this);
-        
+
         //Demo threads
         thread = (Button)findViewById(R.id.btnThread);
         thread.setOnClickListener(this);
+
+        saveAndReadInCache.setOnClickListener(this);
+        saveAndReadSQLStorage.setOnClickListener(this);
     }
 
     /**
@@ -74,6 +83,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnThread:
                 intent = new Intent(this, BackgroundProcessDemo.class);
+            case R.id.btnStoreInCache:
+                intent = new Intent(this, StoringDataInCache.class);
+                break;
+            case R.id.btnSqlStorage:
+                intent = new Intent(this, SQLStorage.class);
+                break;
         }
         startActivity(intent);
     }

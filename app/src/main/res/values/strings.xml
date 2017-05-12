@@ -19,4 +19,13 @@
     <string name="success_write_internal_memory">File Written to internal memory</string>
     <string name="written_external_storage">File Written to external memory</string>
     <string name="threads">Threads</string>
+    <string name="save_and_read_data_in_cache">save and read data in cache</string>
+    <string name="file_saved_in_cache">File Saved in Cache</string>
+    <string name="save_file_in_cache">Save File in Cache</string>
+    <string name="save_data">Save Data</string>
+    <string name="enter_data">Enter Data</string>
+    <string name="show_data">Show Data</string>
+    <string name="saved_data">Saved Data</string>
+    <string name="show">Show</string>
+    <string name="save_and_read_from_sqllite">Save and Read from SQLLite</string>
 </resources>

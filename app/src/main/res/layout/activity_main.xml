@@ -81,6 +81,29 @@
             android:fontFamily="sans-serif-condensed"
             android:text="@string/threads"
             android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/btnStoreInCache"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnThread"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/save_and_read_data_in_cache"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/btnSqlStorage"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnStoreInCache"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/save_and_read_from_sqllite"
+            android:textStyle="normal" />
+
     </RelativeLayout>
 </ScrollView>
 
