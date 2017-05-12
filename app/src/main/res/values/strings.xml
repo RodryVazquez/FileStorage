@@ -18,4 +18,5 @@
     <string name="error_when_close_stream">Error ocurred when close Stream</string>
     <string name="success_write_internal_memory">File Written to internal memory</string>
     <string name="written_external_storage">File Written to external memory</string>
+    <string name="threads">Threads</string>
 </resources>

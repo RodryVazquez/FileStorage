@@ -1,12 +1,20 @@
 package com.example.rodrigovazquez.filestorage;
 
+import android.app.Activity;
+import android.app.IntentService;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Process;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
+import com.example.rodrigovazquez.filestorage.Activities.BackgroundProcessDemo;
 import com.example.rodrigovazquez.filestorage.Activities.ReadFileFromExternalStorage;
 import com.example.rodrigovazquez.filestorage.Activities.ReadFileFromInternalStorage;
 import com.example.rodrigovazquez.filestorage.Activities.WriteFileToExternalStorage;
@@ -18,7 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button writeFileToInternalStorage,
             readFileFromInternalStorage,
             writeFileToExternalStorage,
-            readFileFromExternalStorage;
+            readFileFromExternalStorage,
+            thread;
 
     /**
      * @param savedInstanceState
@@ -26,8 +35,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_storing_data_in_cache);
-       /* writeFileToInternalStorage = (Button)findViewById(R.id.btnWriteToInternalStorage);
+        setContentView(R.layout.activity_main);
+
+        writeFileToInternalStorage = (Button)findViewById(R.id.btnWriteToInternalStorage);
         readFileFromInternalStorage = (Button)findViewById(R.id.btnReadFromInternalStorage);
         writeFileToExternalStorage = (Button)findViewById(R.id.btnWriteToExternalStorage);
         readFileFromExternalStorage = (Button)findViewById(R.id.btnReadFromExternalStorage);
@@ -35,7 +45,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         writeFileToInternalStorage.setOnClickListener(this);
         readFileFromInternalStorage.setOnClickListener(this);
         writeFileToExternalStorage.setOnClickListener(this);
-        readFileFromExternalStorage.setOnClickListener(this);*/
+        readFileFromExternalStorage.setOnClickListener(this);
+        
+        //Demo threads
+        thread = (Button)findViewById(R.id.btnThread);
+        thread.setOnClickListener(this);
     }
 
     /**
@@ -44,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     @Override
     public void onClick(View v) {
-        /*Intent intent = null;
+        Intent intent = null;
         switch (v.getId()) {
             case R.id.btnWriteToInternalStorage:
                 intent = new Intent(this, WriteFileToInternalStorage.class);
@@ -58,7 +72,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnReadFromExternalStorage:
                 intent = new Intent(this, ReadFileFromExternalStorage.class);
                 break;
+            case R.id.btnThread:
+                intent = new Intent(this, BackgroundProcessDemo.class);
         }
-        startActivity(intent);*/
+        startActivity(intent);
     }
 }

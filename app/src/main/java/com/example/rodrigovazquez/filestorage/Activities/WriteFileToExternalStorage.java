@@ -49,9 +49,11 @@ public class WriteFileToExternalStorage extends AppCompatActivity {
             if (CommonUtil.isSdReadable()) {
 
                 String fullPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-                File mFile = new File(fullPath + File.separator + "/" + fileName);
+                File mFile = new File(fullPath + File.separator + "/FileStorage/" + fileName);
 
+                //Habilitamos el stream para escribir en el archivo
                 FileOutputStream fileOutputStream = new FileOutputStream(mFile);
+                //Habilitamos el bridge
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
                 outputStreamWriter.append(fileContent);
 
