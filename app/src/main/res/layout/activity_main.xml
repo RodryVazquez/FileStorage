@@ -70,6 +70,17 @@
             android:fontFamily="sans-serif-condensed"
             android:text="@string/read_file_from_external_storage"
             android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/btnThread"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnReadFromExternalStorage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/threads"
+            android:textStyle="normal" />
     </RelativeLayout>
 </ScrollView>
 
